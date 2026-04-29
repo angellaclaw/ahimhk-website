@@ -1,0 +1,23 @@
+#!/usr/bin/expect -f
+
+set HOST "47.244.152.59"
+set PORT "22"
+set USER "wp_sftp_user"
+set PASS "WPsftp@0420"
+set LOCALDIR "/Users/nelson/corp-site/build"
+set DESTDIR "/data/www/test.ahimhk.com/wordpress"
+
+set timeout 300
+
+spawn scp -P $PORT -r $LOCALDIR/* $USER@$HOST:$DESTDIR/
+expect {
+    "password:" {
+        send "$PASS\r"
+        exp_continue
+    }
+    "yes/no" {
+        send "yes\r"
+        exp_continue
+    }
+    eof
+}

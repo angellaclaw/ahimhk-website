@@ -1,0 +1,34 @@
+#!/usr/bin/expect -f
+
+set HOST "47.244.152.59"
+set PORT "22"
+set USER "wp_sftp_user"
+set PASS "WPsftp@0420"
+
+set timeout 60
+
+spawn sftp -P $PORT $USER@$HOST
+expect "password:"
+send "$PASS\r"
+expect "sftp>"
+
+# Remove remaining files in build
+send "rm /data/www/test.ahimhk.com/wordpress/build/logo.svg\r"
+expect "sftp>"
+send "rm /data/www/test.ahimhk.com/wordpress/build/logo192.png\r"
+expect "sftp>"
+send "rm /data/www/test.ahimhk.com/wordpress/build/logo512.png\r"
+expect "sftp>"
+send "rm /data/www/test.ahimhk.com/wordpress/build/favicon.ico\r"
+expect "sftp>"
+
+# Now try to remove build folder
+send "rmdir /data/www/test.ahimhk.com/wordpress/build\r"
+expect "sftp>"
+
+# Verify
+send "ls /data/www/test.ahimhk.com/wordpress\r"
+expect "sftp>"
+
+send "quit\r"
+expect eof

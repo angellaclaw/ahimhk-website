@@ -1,0 +1,29 @@
+#!/usr/bin/expect -f
+
+set HOST "47.244.152.59"
+set PORT "22"
+set USER "wp_sftp_user"
+set PASS "WPsftp@0420"
+set LOCALDIR "/Users/nelson/corp-site/build"
+set DESTDIR "/data/www/test.ahimhk.com/wordpress"
+
+set timeout 300
+
+spawn sftp -P $PORT $USER@$HOST
+expect "password:"
+send "$PASS\r"
+expect "sftp>"
+
+# Upload everything recursively using put with -r
+send "put -r $LOCALDIR $DESTDIR\r"
+expect {
+    "sftp>" { puts "Upload complete" }
+    timeout { puts "Timeout during upload" }
+}
+
+# Verify
+send "ls $DESTDIR\r"
+expect "sftp>"
+
+send "quit\r"
+expect eof

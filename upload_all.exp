@@ -1,0 +1,104 @@
+#!/usr/bin/expect -f
+
+set HOST "47.244.152.59"
+set PORT "22"
+set USER "wp_sftp_user"
+set PASS "WPsftp@0420"
+set LOCALDIR "/Users/nelson/corp-site/build"
+set DESTDIR "/data/www/test.ahimhk.com/wordpress"
+
+set timeout 300
+
+spawn sftp -P $PORT $USER@$HOST
+expect "password:"
+send "$PASS\r"
+expect "sftp>"
+
+# Upload index and config files to root
+send "lcd $LOCALDIR\r"
+expect "sftp>"
+send "put index.html $DESTDIR/\r"
+expect "sftp>"
+send "put favicon.svg $DESTDIR/\r"
+expect "sftp>"
+send "put robots.txt $DESTDIR/\r"
+expect "sftp>"
+send "put manifest.json $DESTDIR/\r"
+expect "sftp>"
+puts "Uploaded root files"
+
+# Upload CSS - cd to static/css first
+send "cd $DESTDIR/static/css\r"
+expect "sftp>"
+send "lcd $LOCALDIR/static/css\r"
+expect "sftp>"
+send "mput *.css*\r"
+expect "sftp>"
+puts "Uploaded CSS"
+
+# Upload JS - cd to static/js first
+send "cd $DESTDIR/static/js\r"
+expect "sftp>"
+send "lcd $LOCALDIR/static/js\r"
+expect "sftp>"
+send "mput *.js*\r"
+expect "sftp>"
+puts "Uploaded JS"
+
+# Upload images/about
+send "cd $DESTDIR/images/about\r"
+expect "sftp>"
+send "lcd $LOCALDIR/images/about\r"
+expect "sftp>"
+send "mput *\r"
+expect "sftp>"
+puts "Uploaded images/about"
+
+# Upload images/contact
+send "cd $DESTDIR/images/contact\r"
+expect "sftp>"
+send "lcd $LOCALDIR/images/contact\r"
+expect "sftp>"
+send "mput *\r"
+expect "sftp>"
+puts "Uploaded images/contact"
+
+# Upload images/detail
+send "cd $DESTDIR/images/detail\r"
+expect "sftp>"
+send "lcd $LOCALDIR/images/detail\r"
+expect "sftp>"
+send "mput *\r"
+expect "sftp>"
+puts "Uploaded images/detail"
+
+# Upload root level images
+send "cd $DESTDIR/images\r"
+expect "sftp>"
+send "lcd $LOCALDIR/images\r"
+expect "sftp>"
+send "mput *.jpg *.png *.svg\r"
+expect "sftp>"
+puts "Uploaded root images"
+
+# Upload logos
+send "cd $DESTDIR\r"
+expect "sftp>"
+send "lcd $LOCALDIR\r"
+expect "sftp>"
+send "mput favicon.ico logo*.png\r"
+expect "sftp>"
+puts "Uploaded logos"
+
+# Verify
+send "ls $DESTDIR\r"
+expect "sftp>"
+send "ls $DESTDIR/static/css\r"
+expect "sftp>"
+send "ls $DESTDIR/static/js\r"
+expect "sftp>"
+send "ls $DESTDIR/images/about\r"
+expect "sftp>"
+
+send "quit\r"
+expect eof

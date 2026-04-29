@@ -1,0 +1,55 @@
+#!/usr/bin/expect -f
+
+set HOST "47.244.152.59"
+set PORT "22"
+set USER "wp_sftp_user"
+set PASS "WPsftp@0420"
+set LOCALDIR "/Users/nelson/corp-site/build"
+set DESTIMG "/data/www/test.ahimhk.com/wordpress/images"
+set DESTROOT "/data/www/test.ahimhk.com/wordpress"
+
+set timeout 120
+
+spawn sftp -P $PORT $USER@$HOST
+expect "password:"
+send "$PASS\r"
+expect "sftp>"
+
+# Upload root level hero images
+send "cd $DESTIMG\r"
+expect "sftp>"
+send "lcd $LOCALDIR/images\r"
+expect "sftp>"
+send "put hero1.jpg\r"
+expect "sftp>"
+send "put hero2.jpg\r"
+expect "sftp>"
+send "put hero3.jpg\r"
+expect "sftp>"
+send "put tech1.jpg\r"
+expect "sftp>"
+send "put tech2.jpg\r"
+expect "sftp>"
+send "put ahimhk-logo.svg\r"
+expect "sftp>"
+puts "Uploaded hero and logo images"
+
+# Upload logos to root
+send "cd $DESTROOT\r"
+expect "sftp>"
+send "lcd $LOCALDIR\r"
+expect "sftp>"
+send "put favicon.ico\r"
+expect "sftp>"
+send "put logo192.png\r"
+expect "sftp>"
+send "put logo512.png\r"
+expect "sftp>"
+puts "Uploaded logos"
+
+# Verify
+send "ls $DESTIMG\r"
+expect "sftp>"
+
+send "quit\r"
+expect eof

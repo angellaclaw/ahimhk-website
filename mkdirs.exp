@@ -1,0 +1,58 @@
+#!/usr/bin/expect -f
+
+set HOST "47.244.152.59"
+set PORT "22"
+set USER "wp_sftp_user"
+set PASS "WPsftp@0420"
+set DESTDIR "/data/www/test.ahimhk.com/wordpress"
+
+set timeout 120
+
+spawn sftp -P $PORT $USER@$HOST
+expect "password:"
+send "$PASS\r"
+expect "sftp>"
+
+# Create static directory
+send "mkdir $DESTDIR/static\r"
+expect {
+    "sftp>" { }
+    "already exists" { expect "sftp>" }
+}
+
+# Create css and js subdirectories
+send "mkdir $DESTDIR/static/css\r"
+expect {
+    "sftp>" { }
+    "already exists" { expect "sftp>" }
+}
+send "mkdir $DESTDIR/static/js\r"
+expect {
+    "sftp>" { }
+    "already exists" { expect "sftp>" }
+}
+
+# Create images directory with subdirs
+send "mkdir $DESTDIR/images\r"
+expect {
+    "sftp>" { }
+    "already exists" { expect "sftp>" }
+}
+send "mkdir $DESTDIR/images/about\r"
+expect {
+    "sftp>" { }
+    "already exists" { expect "sftp>" }
+}
+send "mkdir $DESTDIR/images/contact\r"
+expect {
+    "sftp>" { }
+    "already exists" { expect "sftp>" }
+}
+send "mkdir $DESTDIR/images/detail\r"
+expect {
+    "sftp>" { }
+    "already exists" { expect "sftp>" }
+}
+
+send "quit\r"
+expect eof
