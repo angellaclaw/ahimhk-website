@@ -58,7 +58,7 @@
 
     <!-- HR -->
     <rect x="15" y="245" width="250" height="55" rx="10" fill="url(#grn)"/>
-    <text x="140" y="273" font-family="Arial" font-size="13" fill="white" text-anchor="middle" font-weight="bold">👥 HR & Payroll</text>
+    <text x="140" y="273" font-family="Arial" font-size="13" fill="white" text-anchor="middle" font-weight="bold">👥 HR &amp; Payroll</text>
     <text x="140" y="291" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.8)" text-anchor="middle">Employees • Contracts • Payslips</text>
 
     <!-- CRM -->

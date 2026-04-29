@@ -11,7 +11,13 @@ function Navbar() {
 
   // Helper to get equivalent path in another language
   const getLangPath = (lang) => {
-    if (lang === 'en') return path.replace(/^\/(zh|cn)/, '/en');
+    // If already on EN root, go to correct page
+    if (path === '/') {
+      if (lang === 'zh') return '/zh';
+      if (lang === 'cn') return '/cn';
+    }
+    // Normal replacement
+    if (lang === 'en') return path.replace(/^\/(zh|cn)/, '/');
     if (lang === 'zh') return path.replace(/^\/(en|cn)/, '/zh');
     if (lang === 'cn') return path.replace(/^\/(en|zh)/, '/cn');
     return path;
