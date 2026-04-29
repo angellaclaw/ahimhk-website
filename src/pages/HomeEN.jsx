@@ -89,6 +89,7 @@ function HomeEN() {
                 <div className="card-body">
                   <h5>Odoo Roadshow Guangzhou</h5>
                   <p>Aoba Hopkins was honored to be invited as session sharing speaker for the event.</p>
+                  <Link to="/en/blog" className="btn btn-sm btn-outline-primary">Read More</Link>
                 </div>
               </div>
             </div>
@@ -98,9 +99,13 @@ function HomeEN() {
                 <div className="card-body">
                   <h5>InnoEX Aoba + Odoo 2023</h5>
                   <p>Showcasing our latest ERP and CRM solutions at the innovation expo.</p>
+                  <Link to="/en/blog" className="btn btn-sm btn-outline-primary">Read More</Link>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="text-center mt-4">
+            <Link to="/en/blog" className="btn btn-primary">View All News</Link>
           </div>
         </div>
       </div>

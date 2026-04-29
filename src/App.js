@@ -11,6 +11,10 @@ import AboutEN from './pages/AboutEN';
 import AboutZH from './pages/AboutZH';
 import ContactEN from './pages/ContactEN';
 import ContactZH from './pages/ContactZH';
+import BlogEN from './pages/blog/BlogEN';
+import BlogZH from './pages/blog/BlogZH';
+import BlogPostEN from './pages/blog/BlogPostEN';
+import BlogPostZH from './pages/blog/BlogPostZH';
 
 // Platform Detail Pages
 import CRMPlatformEN from './pages/solutions/CRMPlatformEN';
@@ -71,6 +75,12 @@ function App() {
             <Route path="/zh/about" element={<AboutZH />} />
             <Route path="/en/contact" element={<ContactEN />} />
             <Route path="/zh/contact" element={<ContactZH />} />
+
+            {/* Blog Pages */}
+            <Route path="/en/blog" element={<BlogEN />} />
+            <Route path="/zh/blog" element={<BlogZH />} />
+            <Route path="/en/blog/:slug" element={<BlogPostEN />} />
+            <Route path="/zh/blog/:slug" element={<BlogPostZH />} />
 
             {/* Platform Detail Pages */}
             <Route path="/en/solutions/crm" element={<CRMPlatformEN />} />

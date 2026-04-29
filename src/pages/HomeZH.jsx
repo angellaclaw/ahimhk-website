@@ -89,6 +89,7 @@ function HomeZH() {
                 <div className="card-body">
                   <h5>Odoo 廣州路演</h5>
                   <p>Aoba Hopkins 很榮幸獲邀擔任活動分享嘉賓。</p>
+                  <Link to="/zh/blog" className="btn btn-sm btn-outline-primary">閱讀更多</Link>
                 </div>
               </div>
             </div>
@@ -98,9 +99,13 @@ function HomeZH() {
                 <div className="card-body">
                   <h5>InnoEX Aoba + Odoo 2023</h5>
                   <p>於創新科技博覽會展示最新 ERP 及 CRM 解決方案。</p>
+                  <Link to="/zh/blog" className="btn btn-sm btn-outline-primary">閱讀更多</Link>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="text-center mt-4">
+            <Link to="/zh/blog" className="btn btn-primary">查看所有資訊</Link>
           </div>
         </div>
       </div>

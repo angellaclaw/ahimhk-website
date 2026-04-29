@@ -16,6 +16,7 @@ function Navbar() {
             <>
               <Link className="nav-link text-dark" to="/zh">首頁</Link>
               <Link className="nav-link text-dark" to="/zh/solutions">方案</Link>
+              <Link className="nav-link text-dark" to="/zh/blog">新聞資訊</Link>
               <Link className="nav-link text-dark" to="/zh/about">關於我們</Link>
               <Link className="nav-link text-dark" to="/zh/contact">聯絡我們</Link>
               <Link className="nav-link badge bg-primary ms-2 text-white" to="/en">EN</Link>
@@ -24,6 +25,7 @@ function Navbar() {
             <>
               <Link className="nav-link text-dark" to="/en">Home</Link>
               <Link className="nav-link text-dark" to="/en/solutions">Solutions</Link>
+              <Link className="nav-link text-dark" to="/en/blog">News</Link>
               <Link className="nav-link text-dark" to="/en/about">About</Link>
               <Link className="nav-link text-dark" to="/en/contact">Contact</Link>
               <Link className="nav-link badge bg-primary ms-2 text-white" to="/zh">中文</Link>
