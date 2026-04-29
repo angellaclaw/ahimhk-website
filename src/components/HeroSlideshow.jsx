@@ -1,57 +1,85 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const slidesEN = [
   {
-    image: '/images/slide-crm.jpg',
+    image: '/images/slide-crm.svg',
     title: 'Professional CRM & ERP Solutions',
     subtitle: 'Empowering Your Business with Intelligent Management',
     cta: 'Contact Us',
     link: '/en/contact',
   },
   {
-    image: '/images/slide-erp.jpg',
-    title: 'Powerful ERP Solutions',
-    subtitle: 'OdooERP Platform • Custom Development • Seamless Integration',
-    cta: 'Learn More',
+    image: '/images/slide-erp.svg',
+    title: 'Powerful ERP Solutions • OdooERP Platform',
+    subtitle: 'Your Complete Business Management System',
+    cta: 'Our Solutions',
     link: '/en/solutions',
   },
   {
-    image: '/images/slide-retail.jpg',
-    title: 'Complete Retail Solutions',
-    subtitle: 'POS • Member CRM • eShop Integration',
-    cta: 'View Solutions',
+    image: '/images/slide-retail.svg',
+    title: 'Complete Retail Solutions • POS • Member CRM',
+    subtitle: 'Seamless Omnichannel Experience for Your Business',
+    cta: 'Learn More',
     link: '/en/solutions',
   },
 ];
 
 const slidesZH = [
   {
-    image: '/images/slide-crm.jpg',
+    image: '/images/slide-crm.svg',
     title: '專業 CRM & ERP 解決方案',
     subtitle: '以智能化管理賦能您的企業',
     cta: '聯絡我們',
     link: '/zh/contact',
   },
   {
-    image: '/images/slide-erp.jpg',
-    title: '強大 ERP 解決方案',
-    subtitle: 'OdooERP 平台 • 定制開發 • 無縫整合',
-    cta: '了解更多',
+    image: '/images/slide-erp.svg',
+    title: '強大 ERP 解決方案 • OdooERP 平台',
+    subtitle: '您的全方位企業管理系統',
+    cta: '我們的方案',
     link: '/zh/solutions',
   },
   {
-    image: '/images/slide-retail.jpg',
-    title: '一體化零售解決方案',
-    subtitle: 'POS • 會員 CRM • 網店整合',
-    cta: '查看方案',
+    image: '/images/slide-retail.svg',
+    title: '一體化零售解決方案 • POS • 會員 CRM',
+    subtitle: '無縫跨渠道體驗',
+    cta: '了解更多',
     link: '/zh/solutions',
   },
 ];
 
-function HeroSlideshow({ language = 'EN' }) {
-  const slides = language === 'ZH' ? slidesZH : slidesEN;
+const slidesCN = [
+  {
+    image: '/images/slide-crm.svg',
+    title: '专业 CRM & ERP 解决方案',
+    subtitle: '以智能化管理赋能您的企业',
+    cta: '联系我们',
+    link: '/cn/contact',
+  },
+  {
+    image: '/images/slide-erp.svg',
+    title: '强大 ERP 解决方案 • OdooERP 平台',
+    subtitle: '您的全方位企业管理平台',
+    cta: '了解更多',
+    link: '/cn/solutions',
+  },
+  {
+    image: '/images/slide-retail.svg',
+    title: '一体化零售解决方案 • POS • 会员 CRM',
+    subtitle: '无缝全渠道体验',
+    cta: '了解更多',
+    link: '/cn/solutions',
+  },
+];
+
+function HeroSlideshow() {
+  const location = useLocation();
+  const path = location.pathname;
+  const isCn = path.startsWith('/cn');
+  const isZh = path.startsWith('/zh');
+  const slides = isCn ? slidesCN : isZh ? slidesZH : slidesEN;
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {

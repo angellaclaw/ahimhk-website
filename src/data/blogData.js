@@ -101,3 +101,55 @@ export const blogPostsZH = [
     tags: ['CRM', '零售', '方案']
   }
 ];
+
+export const blogPostsCN = [
+  {
+    id: 1,
+    slug: 'odoo-roadshow-guangzhou-2024',
+    title: 'Odoo 广州路演 2024',
+    date: '2024-10-15',
+    image: '/images/hero2.jpg',
+    excerpt: 'A Solutions 很荣幸获邀在广州 Odoo 路演担任分享嘉宾。',
+    content: `
+      <p>A Solutions 资讯管理很荣幸获邀在今年广州 Odoo 路演担任分享嘉宾。</p>
+      <p>我们的团队以"中小企数码转型：Odoo ERP 与 CRM 解决方案"为题进行分享，与超过200位来自不同行业的与会者交流经验与见解。</p>
+      <p>活动圆满成功，我们期待未来有更多机会与业界分享我们的知识与专业。</p>
+    `,
+    tags: ['活动', 'Odoo', 'ERP']
+  },
+  {
+    id: 2,
+    slug: 'innoex-aoba-odoo-2023',
+    title: 'InnoEX Aoba + Odoo 2023',
+    date: '2023-04-15',
+    image: '/images/hero3.jpg',
+    excerpt: '于香港创新科技博览会展示最新 ERP 及 CRM 解决方案。',
+    content: `
+      <p>我们很荣幸在2023年香港创新科技博览会（InnoEX）展示最新的 ERP 及 CRM 解决方案。</p>
+      <p>我们的展位展示了整合零售方案的现场演示，包括收银系统、会员 CRM 及网店整合。</p>
+      <p>参观者对我们基于 Odoo 的解决方案表现出浓厚的兴趣，并与来自零售、美容及专业服务行业的潜在客户进行了深入的交流。</p>
+    `,
+    tags: ['活动', '展览', 'CRM']
+  },
+  {
+    id: 3,
+    slug: 'member-crm-retail-solutions',
+    title: '会员 CRM 如何改变零售业',
+    date: '2024-06-20',
+    image: '/images/detail/member-crm.jpg',
+    excerpt: '了解我们的会员 CRM 解决方案如何帮助零售企业提升客户忠诚度并增加销售。',
+    content: `
+      <p>在竞争激烈的零售环境中，客户忠诚度比以往任何时候都更加重要。我们的会员 CRM 解决方案帮助企业与客户建立长久的关系。</p>
+      <h5>主要功能：</h5>
+      <ul>
+        <li>完整的会员资料及消费记录</li>
+        <li>积分奖励系统</li>
+        <li>自动化营销活动</li>
+        <li>预约服务及日程管理</li>
+        <li>多渠道客户互动</li>
+      </ul>
+      <p>欢迎联络我们，了解如何利用会员 CRM 转型您的零售业务。</p>
+    `,
+    tags: ['CRM', '零售', '方案']
+  }
+];

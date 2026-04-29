@@ -7,7 +7,7 @@ function HomeZH() {
   return (
     <div>
       {/* Hero Slideshow */}
-      <HeroSlideshow language="ZH" />
+      <HeroSlideshow />
 
       {/* Solutions Overview */}
       <div className="container py-5">
