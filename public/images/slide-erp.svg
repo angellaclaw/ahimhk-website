@@ -1,202 +1,115 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 600" width="1920" height="600">
+<svg viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f0c29"/>
-      <stop offset="50%" style="stop-color:#302b63"/>
-      <stop offset="100%" style="stop-color:#24243e"/>
+    <linearGradient id="erpBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a14"/>
+      <stop offset="100%" style="stop-color:#0d1f0d"/>
     </linearGradient>
-    <linearGradient id="ora" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#f37335"/>
-      <stop offset="100%" style="stop-color:#fdc830"/>
+    <linearGradient id="erpAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#22c55e"/>
     </linearGradient>
-    <linearGradient id="blu" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#2193b0"/>
-      <stop offset="100%" style="stop-color:#6dd5ed"/>
-    </linearGradient>
-    <linearGradient id="pur" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#cc2b5e"/>
-      <stop offset="100%" style="stop-color:#753a88"/>
-    </linearGradient>
-    <linearGradient id="grn" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#134e5e"/>
-      <stop offset="100%" style="stop-color:#71b280"/>
-    </linearGradient>
-    <filter id="glow2">
-      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
-
-  <rect width="1920" height="600" fill="url(#bg2)"/>
-
-  <!-- Decorative elements -->
-  <circle cx="1700" cy="100" r="250" fill="rgba(249,87,56,0.08)"/>
-  <circle cx="200" cy="500" r="200" fill="rgba(33,147,176,0.08)"/>
-  <circle cx="960" cy="300" r="350" fill="rgba(255,255,255,0.02)"/>
-
-  <!-- Left: Odoo-style module icons -->
-  <g transform="translate(60, 80)">
-    <!-- Module cards -->
-    <rect x="0" y="0" width="280" height="440" rx="16" fill="rgba(255,255,255,0.08)"/>
-
-    <text x="140" y="30" font-family="Arial" font-size="13" fill="rgba(255,255,255,0.7)" text-anchor="middle" font-weight="bold">OdooERP Modules</text>
-
-    <!-- Sales module -->
-    <rect x="15" y="50" width="250" height="55" rx="10" fill="url(#ora)"/>
-    <text x="140" y="78" font-family="Arial" font-size="13" fill="white" text-anchor="middle" font-weight="bold">💰 Sales</text>
-    <text x="140" y="96" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.8)" text-anchor="middle">Quotations • Orders • Invoicing</text>
-
-    <!-- Inventory -->
-    <rect x="15" y="115" width="250" height="55" rx="10" fill="url(#blu)"/>
-    <text x="140" y="143" font-family="Arial" font-size="13" fill="white" text-anchor="middle" font-weight="bold">📦 Inventory</text>
-    <text x="140" y="161" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.8)" text-anchor="middle">Stock • Warehouses • Transfers</text>
-
-    <!-- Accounting -->
-    <rect x="15" y="180" width="250" height="55" rx="10" fill="url(#pur)"/>
-    <text x="140" y="208" font-family="Arial" font-size="13" fill="white" text-anchor="middle" font-weight="bold">📊 Accounting</text>
-    <text x="140" y="226" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.8)" text-anchor="middle">Invoices • Expenses • Banking</text>
-
-    <!-- HR -->
-    <rect x="15" y="245" width="250" height="55" rx="10" fill="url(#grn)"/>
-    <text x="140" y="273" font-family="Arial" font-size="13" fill="white" text-anchor="middle" font-weight="bold">👥 HR &amp; Payroll</text>
-    <text x="140" y="291" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.8)" text-anchor="middle">Employees • Contracts • Payslips</text>
-
-    <!-- CRM -->
-    <rect x="15" y="310" width="250" height="55" rx="10" fill="url(#ora)"/>
-    <text x="140" y="338" font-family="Arial" font-size="13" fill="white" text-anchor="middle" font-weight="bold">🤝 CRM</text>
-    <text x="140" y="356" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.8)" text-anchor="middle">Leads • Opportunities • Tasks</text>
-
-    <!-- eCommerce -->
-    <rect x="15" y="375" width="250" height="55" rx="10" fill="url(#blu)"/>
-    <text x="140" y="403" font-family="Arial" font-size="13" fill="white" text-anchor="middle" font-weight="bold">🌐 eCommerce</text>
-    <text x="140" y="421" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.8)" text-anchor="middle">Website • Blog • SEO • Shop</text>
-  </g>
-
-  <!-- Center: ERP Integration hub -->
-  <g transform="translate(600, 80)" filter="url(#glow2)">
-    <circle cx="360" cy="220" r="120" fill="rgba(249,87,56,0.2)"/>
-    <circle cx="360" cy="220" r="80" fill="rgba(249,87,56,0.3)"/>
-    <circle cx="360" cy="220" r="45" fill="rgba(255,255,255,0.9)"/>
-    <text x="360" y="215" font-family="Arial" font-size="11" fill="#302b63" text-anchor="middle" font-weight="bold">ERP</text>
-    <text x="360" y="230" font-family="Arial" font-size="11" fill="#302b63" text-anchor="middle" font-weight="bold">Hub</text>
-
-    <!-- Connecting lines to modules -->
-    <line x1="280" y1="150" x2="300" y2="180" stroke="#fdc830" stroke-width="4" stroke-dasharray="8,4"/>
-    <line x1="440" y1="150" x2="420" y2="180" stroke="#6dd5ed" stroke-width="4" stroke-dasharray="8,4"/>
-    <line x1="250" y1="280" x2="290" y2="260" stroke="#cc2b5e" stroke-width="4" stroke-dasharray="8,4"/>
-    <line x1="470" y1="280" x2="430" y2="260" stroke="#71b280" stroke-width="4" stroke-dasharray="8,4"/>
-    <line x1="360" y1="340" x2="360" y2="310" stroke="#fdc830" stroke-width="4" stroke-dasharray="8,4"/>
-  </g>
-
-  <!-- Right: Odoo dashboard -->
-  <g transform="translate(1100, 40)">
-    <rect x="0" y="0" width="760" height="520" rx="16" fill="rgba(255,255,255,0.12)"/>
-
-    <!-- Title bar -->
-    <rect x="0" y="0" width="760" height="50" rx="16" fill="rgba(0,0,0,0.15)"/>
-    <rect x="0" y="30" width="760" height="20" fill="rgba(0,0,0,0.15)"/>
-    <circle cx="30" cy="25" r="8" fill="#ff5f57"/>
-    <circle cx="55" cy="25" r="8" fill="#ffbd2e"/>
-    <circle cx="80" cy="25" r="8" fill="#28c840"/>
-    <text x="380" y="30" font-family="Arial" font-size="14" fill="white" text-anchor="middle" opacity="0.9">OdooERP — Accounting Dashboard</text>
-
-    <!-- Financial KPIs -->
-    <rect x="20" y="65" width="165" height="80" rx="10" fill="url(#ora)"/>
-    <text x="102" y="95" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.8)" text-anchor="middle">Total Revenue</text>
-    <text x="102" y="125" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">$3,847,200</text>
-
-    <rect x="200" y="65" width="165" height="80" rx="10" fill="url(#blu)"/>
-    <text x="282" y="95" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.8)" text-anchor="middle">Outstanding</text>
-    <text x="282" y="125" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">$423,500</text>
-
-    <rect x="380" y="65" width="165" height="80" rx="10" fill="url(#pur)"/>
-    <text x="462" y="95" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.8)" text-anchor="middle">Expenses</text>
-    <text x="462" y="125" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">$1,203,800</text>
-
-    <rect x="560" y="65" width="180" height="80" rx="10" fill="url(#grn)"/>
-    <text x="650" y="95" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.8)" text-anchor="middle">Net Profit</text>
-    <text x="650" y="125" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">$2,643,400</text>
-
-    <!-- Line chart -->
-    <rect x="20" y="160" width="430" height="200" rx="10" fill="rgba(255,255,255,0.08)"/>
-    <text x="235" y="185" font-family="Arial" font-size="12" fill="rgba(255,255,255,0.8)" text-anchor="middle">Revenue vs Expenses — Last 6 Months</text>
-    <!-- Grid lines -->
-    <line x1="60" y1="210" x2="420" y2="210" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-    <line x1="60" y1="250" x2="420" y2="250" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-    <line x1="60" y1="290" x2="420" y2="290" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-    <line x1="60" y1="330" x2="420" y2="330" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-    <!-- Revenue line (orange) -->
-    <polyline points="70,320 140,280 210,250 280,220 350,200 410,180" fill="none" stroke="#f37335" stroke-width="3"/>
-    <!-- Expenses line (blue) -->
-    <polyline points="70,340 140,320 210,300 280,290 350,310 410,295" fill="none" stroke="#6dd5ed" stroke-width="3"/>
-    <!-- Legend -->
-    <rect x="70" y="345" width="20" height="4" rx="2" fill="#f37335"/>
-    <text x="95" y="350" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.7)">Revenue</text>
-    <rect x="160" y="345" width="20" height="4" rx="2" fill="#6dd5ed"/>
-    <text x="185" y="350" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.7)">Expenses</text>
-    <!-- Month labels -->
-    <text x="70" y="365" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">Jan</text>
-    <text x="210" y="365" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">Mar</text>
-    <text x="350" y="365" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">May</text>
-    <text x="410" y="365" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">Jun</text>
-
-    <!-- Invoice list -->
-    <rect x="470" y="160" width="270" height="200" rx="10" fill="rgba(255,255,255,0.08)"/>
-    <text x="605" y="185" font-family="Arial" font-size="12" fill="rgba(255,255,255,0.8)" text-anchor="middle">Recent Invoices</text>
-    <line x1="490" y1="198" x2="720" y2="198" stroke="rgba(255,255,255,0.15)"/>
-    <!-- Invoice rows -->
-    <text x="490" y="218" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.7)">INV-2024-001</text>
-    <text x="610" y="218" font-family="Arial" font-size="9" fill="white" text-anchor="middle">$12,500</text>
-    <rect x="660" y="208" width="55" height="14" rx="7" fill="#38ef7d"/>
-    <text x="688" y="218" font-family="Arial" font-size="8" fill="white" text-anchor="middle">Paid</text>
-    <line x1="490" y1="232" x2="720" y2="232" stroke="rgba(255,255,255,0.1)"/>
-
-    <text x="490" y="252" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.7)">INV-2024-002</text>
-    <text x="610" y="252" font-family="Arial" font-size="9" fill="white" text-anchor="middle">$8,200</text>
-    <rect x="660" y="242" width="55" height="14" rx="7" fill="#fdc830"/>
-    <text x="688" y="252" font-family="Arial" font-size="8" fill="#302b63" text-anchor="middle">Pending</text>
-    <line x1="490" y1="266" x2="720" y2="266" stroke="rgba(255,255,255,0.1)"/>
-
-    <text x="490" y="286" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.7)">INV-2024-003</text>
-    <text x="610" y="286" font-family="Arial" font-size="9" fill="white" text-anchor="middle">$24,000</text>
-    <rect x="660" y="276" width="55" height="14" rx="7" fill="#38ef7d"/>
-    <text x="688" y="286" font-family="Arial" font-size="8" fill="white" text-anchor="middle">Paid</text>
-    <line x1="490" y1="300" x2="720" y2="300" stroke="rgba(255,255,255,0.1)"/>
-
-    <text x="490" y="320" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.7)">INV-2024-004</text>
-    <text x="610" y="320" font-family="Arial" font-size="9" fill="white" text-anchor="middle">$15,750</text>
-    <rect x="660" y="310" width="55" height="14" rx="7" fill="#cc2b5e"/>
-    <text x="688" y="320" font-family="Arial" font-size="8" fill="white" text-anchor="middle">Overdue</text>
-
-    <!-- Inventory mini cards -->
-    <rect x="20" y="380" width="350" height="120" rx="10" fill="rgba(255,255,255,0.08)"/>
-    <text x="195" y="403" font-family="Arial" font-size="12" fill="rgba(255,255,255,0.8)" text-anchor="middle">Inventory Status</text>
-    <rect x="40" y="418" width="80" height="65" rx="8" fill="url(#blu)"/>
-    <text x="80" y="448" font-family="Arial" font-size="22" fill="white" text-anchor="middle" font-weight="bold">1,284</text>
-    <text x="80" y="468" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.8)" text-anchor="middle">Products</text>
-    <rect x="135" y="418" width="80" height="65" rx="8" fill="url(#ora)"/>
-    <text x="175" y="448" font-family="Arial" font-size="22" fill="white" text-anchor="middle" font-weight="bold">48</text>
-    <text x="175" y="468" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.8)" text-anchor="middle">Low Stock</text>
-    <rect x="230" y="418" width="80" height="65" rx="8" fill="url(#grn)"/>
-    <text x="270" y="448" font-family="Arial" font-size="22" fill="white" text-anchor="middle" font-weight="bold">312</text>
-    <text x="270" y="468" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.8)" text-anchor="middle">Orders</text>
-    <rect x="325" y="418" width="30" height="65" rx="8" fill="rgba(255,255,255,0.2)"/>
-    <text x="340" y="455" font-family="Arial" font-size="18" fill="white" text-anchor="middle">→</text>
-
-    <!-- Quick actions -->
-    <rect x="390" y="380" width="350" height="120" rx="10" fill="rgba(255,255,255,0.08)"/>
-    <text x="565" y="403" font-family="Arial" font-size="12" fill="rgba(255,255,255,0.8)" text-anchor="middle">⚡ Quick Actions</text>
-    <rect x="410" y="418" width="100" height="32" rx="8" fill="url(#ora)"/>
-    <text x="460" y="438" font-family="Arial" font-size="10" fill="white" text-anchor="middle">+ New Invoice</text>
-    <rect x="525" y="418" width="100" height="32" rx="8" fill="url(#blu)"/>
-    <text x="575" y="438" font-family="Arial" font-size="10" fill="white" text-anchor="middle">+ Purchase</text>
-    <rect x="640" y="418" width="90" height="32" rx="8" fill="url(#pur)"/>
-    <text x="685" y="438" font-family="Arial" font-size="10" fill="white" text-anchor="middle">+ Customer</text>
-    <rect x="410" y="460" width="100" height="32" rx="8" fill="url(#grn)"/>
-    <text x="460" y="480" font-family="Arial" font-size="10" fill="white" text-anchor="middle">+ Product</text>
-    <rect x="525" y="460" width="100" height="32" rx="8" fill="rgba(255,255,255,0.2)"/>
-    <text x="575" y="480" font-family="Arial" font-size="10" fill="white" text-anchor="middle">📊 Reports</text>
-    <rect x="640" y="460" width="90" height="32" rx="8" fill="rgba(255,255,255,0.2)"/>
-    <text x="685" y="480" font-family="Arial" font-size="10" fill="white" text-anchor="middle">⚙️ Settings</text>
-  </g>
+  <rect width="1440" height="600" fill="url(#erpBg)"/>
+  <rect x="0" y="0" width="580" height="600" fill="#050508" opacity="0.7"/>
+  <rect x="0" y="0" width="6" height="600" fill="url(#erpAccent)"/>
+  <rect x="60" y="185" width="180" height="30" rx="15" fill="#f97316" opacity="0.25"/>
+  <text x="75" y="206" font-family="Arial, sans-serif" font-size="13" fill="#fed7aa" font-weight="bold" letter-spacing="2">ERP · 企業資源規劃</text>
+  <line x1="60" y1="250" x2="160" y2="250" stroke="#f97316" stroke-width="3" opacity="0.7"/>
+  <text x="60" y="295" font-family="Arial, sans-serif" font-size="58" fill="#ffffff" font-weight="bold">強大 ERP</text>
+  <text x="60" y="358" font-family="Arial, sans-serif" font-size="58" fill="#22c55e" font-weight="bold">Odoo 旗艦平台</text>
+  <text x="60" y="415" font-family="Arial, sans-serif" font-size="20" fill="#94a3b8">整合採購、庫存、銷售、財務與人力資源</text>
+  <text x="60" y="443" font-family="Arial, sans-serif" font-size="20" fill="#94a3b8">靈活擴展 · 智能管理 · 助力業務增長</text>
+  <rect x="60" y="480" width="200" height="52" rx="26" fill="#f97316"/>
+  <text x="110" y="514" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="bold" text-anchor="middle">了解更多 →</text>
+  <rect x="620" y="60" width="760" height="480" rx="16" fill="#0d1a0d"/>
+  <rect x="620" y="60" width="760" height="50" rx="16" fill="#142614"/>
+  <rect x="620" y="94" width="760" height="16" fill="#142614"/>
+  <circle cx="648" cy="85" r="6" fill="#ef4444"/>
+  <circle cx="668" cy="85" r="6" fill="#f59e0b"/>
+  <circle cx="688" cy="85" r="6" fill="#22c55e"/>
+  <text x="1000" y="90" font-family="Arial, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">ERP Dashboard — Odoo Platform</text>
+  <rect x="648" y="130" width="200" height="392" rx="10" fill="#081208"/>
+  <rect x="658" y="142" width="180" height="34" rx="8" fill="#15803d" opacity="0.8"/>
+  <text x="688" y="164" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">📦 採購管理</text>
+  <rect x="658" y="184" width="180" height="34" rx="8" fill="#142614"/>
+  <text x="688" y="206" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">📊 銷售分析</text>
+  <rect x="658" y="226" width="180" height="34" rx="8" fill="#142614"/>
+  <text x="688" y="248" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">💰 財務管理</text>
+  <rect x="658" y="268" width="180" height="34" rx="8" fill="#142614"/>
+  <text x="688" y="290" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">👥 人力資源</text>
+  <rect x="658" y="310" width="180" height="34" rx="8" fill="#142614"/>
+  <text x="688" y="332" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">📈 報表中心</text>
+  <rect x="658" y="352" width="180" height="34" rx="8" fill="#142614"/>
+  <text x="688" y="374" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">⚙️ 系統設定</text>
+  <rect x="648" y="396" width="200" height="126" rx="10" fill="#142614"/>
+  <text x="663" y="422" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">本月毛利潤</text>
+  <text x="663" y="458" font-family="Arial, sans-serif" font-size="28" fill="#ffffff" font-weight="bold">HK$1.28M</text>
+  <text x="763" y="458" font-family="Arial, sans-serif" font-size="14" fill="#22c55e">↑ 18%</text>
+  <rect x="870" y="130" width="250" height="108" rx="10" fill="#142614"/>
+  <text x="885" y="156" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">月銷售額</text>
+  <text x="885" y="200" font-family="Arial, sans-serif" font-size="30" fill="#ffffff" font-weight="bold">HK$4.85M</text>
+  <text x="1005" y="200" font-family="Arial, sans-serif" font-size="13" fill="#22c55e">↑ 12%</text>
+  <rect x="885" y="214" width="210" height="6" rx="3" fill="#081208"/>
+  <rect x="885" y="214" width="145" height="6" rx="3" fill="#f97316"/>
+  <rect x="1140" y="130" width="228" height="108" rx="10" fill="#142614"/>
+  <text x="1155" y="156" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">庫存周轉率</text>
+  <text x="1155" y="200" font-family="Arial, sans-serif" font-size="30" fill="#ffffff" font-weight="bold">8.4x</text>
+  <text x="1230" y="200" font-family="Arial, sans-serif" font-size="13" fill="#22c55e">↑ 0.6x</text>
+  <rect x="870" y="252" width="498" height="160" rx="10" fill="#142614"/>
+  <text x="885" y="278" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">每月銷售額趨勢</text>
+  <rect x="885" y="380" width="28" height="18" rx="4" fill="#f97316" opacity="0.4"/>
+  <rect x="885" y="365" width="28" height="15" rx="4" fill="#f97316" opacity="0.6"/>
+  <rect x="885" y="345" width="28" height="20" rx="4" fill="#f97316" opacity="0.8"/>
+  <rect x="885" y="318" width="28" height="27" rx="4" fill="#f97316"/>
+  <rect x="925" y="378" width="28" height="20" rx="4" fill="#22c55e" opacity="0.4"/>
+  <rect x="925" y="362" width="28" height="16" rx="4" fill="#22c55e" opacity="0.6"/>
+  <rect x="925" y="338" width="28" height="24" rx="4" fill="#22c55e" opacity="0.8"/>
+  <rect x="925" y="310" width="28" height="28" rx="4" fill="#22c55e"/>
+  <rect x="965" y="375" width="28" height="23" rx="4" fill="#f97316" opacity="0.4"/>
+  <rect x="965" y="358" width="28" height="17" rx="4" fill="#f97316" opacity="0.6"/>
+  <rect x="965" y="332" width="28" height="26" rx="4" fill="#f97316" opacity="0.8"/>
+  <rect x="965" y="303" width="28" height="29" rx="4" fill="#f97316"/>
+  <rect x="1005" y="370" width="28" height="28" rx="4" fill="#22c55e" opacity="0.4"/>
+  <rect x="1005" y="352" width="28" height="18" rx="4" fill="#22c55e" opacity="0.6"/>
+  <rect x="1005" y="328" width="28" height="24" rx="4" fill="#22c55e" opacity="0.8"/>
+  <rect x="1005" y="298" width="28" height="30" rx="4" fill="#22c55e"/>
+  <rect x="1045" y="365" width="28" height="33" rx="4" fill="#f97316" opacity="0.4"/>
+  <rect x="1045" y="348" width="28" height="17" rx="4" fill="#f97316" opacity="0.6"/>
+  <rect x="1045" y="322" width="28" height="26" rx="4" fill="#f97316" opacity="0.8"/>
+  <rect x="1045" y="293" width="28" height="29" rx="4" fill="#f97316"/>
+  <rect x="1085" y="360" width="28" height="38" rx="4" fill="#22c55e" opacity="0.4"/>
+  <rect x="1085" y="340" width="28" height="20" rx="4" fill="#22c55e" opacity="0.6"/>
+  <rect x="1085" y="315" width="28" height="25" rx="4" fill="#22c55e" opacity="0.8"/>
+  <rect x="1085" y="288" width="28" height="27" rx="4" fill="#22c55e"/>
+  <rect x="1125" y="352" width="28" height="46" rx="4" fill="#f97316" opacity="0.4"/>
+  <rect x="1125" y="332" width="28" height="20" rx="4" fill="#f97316" opacity="0.6"/>
+  <rect x="1125" y="308" width="28" height="24" rx="4" fill="#f97316" opacity="0.8"/>
+  <rect x="1125" y="280" width="28" height="28" rx="4" fill="#f97316"/>
+  <rect x="1165" y="345" width="28" height="53" rx="4" fill="#22c55e" opacity="0.4"/>
+  <rect x="1165" y="322" width="28" height="23" rx="4" fill="#22c55e" opacity="0.6"/>
+  <rect x="1165" y="300" width="28" height="22" rx="4" fill="#22c55e" opacity="0.8"/>
+  <rect x="1165" y="273" width="28" height="27" rx="4" fill="#22c55e"/>
+  <text x="899" y="415" font-family="Arial, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Jan</text>
+  <text x="939" y="415" font-family="Arial, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Feb</text>
+  <text x="979" y="415" font-family="Arial, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Mar</text>
+  <text x="1019" y="415" font-family="Arial, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Apr</text>
+  <text x="1059" y="415" font-family="Arial, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">May</text>
+  <text x="1099" y="415" font-family="Arial, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Jun</text>
+  <text x="1139" y="415" font-family="Arial, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Jul</text>
+  <text x="1179" y="415" font-family="Arial, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Aug</text>
+  <rect x="870" y="426" width="250" height="96" rx="10" fill="#142614"/>
+  <text x="885" y="452" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">人力資源</text>
+  <text x="885" y="485" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" font-weight="bold">128 名員工</text>
+  <rect x="885" y="495" width="210" height="8" rx="4" fill="#081208"/>
+  <rect x="885" y="495" width="55" height="8" rx="4" fill="#ef4444"/>
+  <rect x="950" y="495" width="60" height="8" rx="4" fill="#f59e0b"/>
+  <rect x="1018" y="495" width="77" height="8" rx="4" fill="#22c55e"/>
+  <rect x="1140" y="426" width="228" height="96" rx="10" fill="#142614"/>
+  <text x="1155" y="452" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">Odoo ERP</text>
+  <text x="1155" y="485" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" font-weight="bold">旗艦版用戶</text>
+  <text x="1155" y="510" font-family="Arial, sans-serif" font-size="13" fill="#22c55e">已集成 8 個模組</text>
+  <circle cx="1370" cy="85" r="5" fill="#ef4444"/>
+  <circle cx="1350" cy="85" r="5" fill="#f59e0b"/>
+  <circle cx="1330" cy="85" r="5" fill="#22c55e"/>
+  <text x="1380" y="560" font-family="Arial, sans-serif" font-size="11" fill="#4b5563" text-anchor="end">AH Solutions Limited</text>
 </svg>
