@@ -1,21 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import HeroSlideshow from '../components/HeroSlideshow';
 
 function HomeZH() {
   return (
     <div>
-      {/* Hero Banner */}
-      <div className="position-relative" style={{ maxHeight: '400px', overflow: 'hidden' }}>
-        <img src="/images/hero1.jpg" alt="企業形象" className="w-100" style={{ objectFit: 'cover', maxHeight: '400px' }} />
-        <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style={{ background: 'rgba(0,0,0,0.45)' }}>
-          <div className="container text-white text-center">
-            <h1 className="display-4 fw-bold">Aoba Hopkins 資訊管理顧問</h1>
-            <p className="lead">專業 CRM & ERP 企業解決方案</p>
-            <Link to="/zh/contact" className="btn btn-light btn-lg mt-2">聯絡我們</Link>
-          </div>
-        </div>
-      </div>
+      {/* Hero Slideshow */}
+      <HeroSlideshow language="ZH" />
 
       {/* Solutions Overview */}
       <div className="container py-5">
