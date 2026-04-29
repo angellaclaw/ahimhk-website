@@ -50,6 +50,7 @@ function HomeZH() {
           </div>
           <div className="col-md-4">
             <div className="card h-100 shadow-sm">
+              <img src="/images/detail/pos-system.jpg" alt="零售收銀系統" className="card-img-top" style={{ height: '160px', objectFit: 'cover' }} />
               <div className="card-body">
                 <h5 className="card-title">零售收銀系統 (POS)</h5>
                 <p className="card-text">ERP 方案配備收銀系統整合，Odoo 一體化零售方案包含會員忠誠度和獎賞計劃。</p>
@@ -58,6 +59,7 @@ function HomeZH() {
           </div>
           <div className="col-md-4">
             <div className="card h-100 shadow-sm">
+              <img src="/images/detail/touchpoints.jpg" alt="全方位觸點" className="card-img-top" style={{ height: '160px', objectFit: 'cover' }} />
               <div className="card-body">
                 <h5 className="card-title">全方位觸點</h5>
                 <p className="card-text">網頁門戶、流動網頁、APP、WhatsApp、微信 — 連接您的客戶、合作夥伴和員工。</p>
@@ -66,6 +68,7 @@ function HomeZH() {
           </div>
           <div className="col-md-4">
             <div className="card h-100 shadow-sm">
+              <img src="/images/detail/data-integration.jpg" alt="數據整合" className="card-img-top" style={{ height: '160px', objectFit: 'cover' }} />
               <div className="card-body">
                 <h5 className="card-title">數據整合</h5>
                 <p className="card-text">透過 XML RPC、Restful、JSON 及 CSV 進行強大的數據整合，確保跨平台安全連接。</p>

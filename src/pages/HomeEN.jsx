@@ -50,6 +50,7 @@ function HomeEN() {
           </div>
           <div className="col-md-4">
             <div className="card h-100 shadow-sm">
+              <img src="/images/detail/pos-system.jpg" alt="Point of Sales" className="card-img-top" style={{ height: '160px', objectFit: 'cover' }} />
               <div className="card-body">
                 <h5 className="card-title">Point of Sales</h5>
                 <p className="card-text">ERP solution with ready POS integration. Odoo-based All-in-One retail with member loyalty and rewards.</p>
@@ -58,6 +59,7 @@ function HomeEN() {
           </div>
           <div className="col-md-4">
             <div className="card h-100 shadow-sm">
+              <img src="/images/detail/touchpoints.jpg" alt="Extended Touchpoints" className="card-img-top" style={{ height: '160px', objectFit: 'cover' }} />
               <div className="card-body">
                 <h5 className="card-title">Extended Touchpoints</h5>
                 <p className="card-text">Web Portal, Mobile Web, APP, WhatsApp, WeChat — connecting you with customers, partners and staff.</p>
@@ -66,6 +68,7 @@ function HomeEN() {
           </div>
           <div className="col-md-4">
             <div className="card h-100 shadow-sm">
+              <img src="/images/detail/data-integration.jpg" alt="Data Integration" className="card-img-top" style={{ height: '160px', objectFit: 'cover' }} />
               <div className="card-body">
                 <h5 className="card-title">Data Integration</h5>
                 <p className="card-text">Strong integration via XML RPC, Restful, JSON, and CSV with robust security for cross-platform connectivity.</p>

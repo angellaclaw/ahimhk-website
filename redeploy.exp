@@ -1,0 +1,38 @@
+#!/usr/bin/expect -f
+
+set HOST "47.244.152.59"
+set PORT "22"
+set USER "wp_sftp_user"
+set PASS "WPsftp@0420"
+set LOCALDIR "/Users/nelson/corp-site/build"
+set DESTDIR "/data/www/test.ahimhk.com/wordpress"
+
+set timeout 60
+
+spawn sftp -P $PORT $USER@$HOST
+expect "password:"
+send "$PASS\r"
+expect "sftp>"
+
+# Upload updated index.html
+send "put $LOCALDIR/index.html $DESTDIR/\r"
+expect "sftp>"
+
+# Upload updated CSS
+send "cd $DESTDIR/static/css\r"
+expect "sftp>"
+send "lcd $LOCALDIR/static/css\r"
+expect "sftp>"
+send "mput *.css*\r"
+expect "sftp>"
+
+# Upload updated JS
+send "cd $DESTDIR/static/js\r"
+expect "sftp>"
+send "lcd $LOCALDIR/static/js\r"
+expect "sftp>"
+send "mput *.js*\r"
+expect "sftp>"
+
+send "quit\r"
+expect eof
