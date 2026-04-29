@@ -84,7 +84,8 @@ function HomeZH() {
           <h2 className="mb-4">最新資訊</h2>
           <div className="row">
             <div className="col-md-6 mb-3">
-              <div className="card">
+              <div className="card h-100">
+                <img src="/images/hero2.jpg" alt="Odoo 廣州路演" className="card-img-top" style={{ height: '120px', objectFit: 'cover' }} />
                 <div className="card-body">
                   <h5>Odoo 廣州路演</h5>
                   <p>Aoba Hopkins 很榮幸獲邀擔任活動分享嘉賓。</p>
@@ -92,7 +93,8 @@ function HomeZH() {
               </div>
             </div>
             <div className="col-md-6 mb-3">
-              <div className="card">
+              <div className="card h-100">
+                <img src="/images/hero3.jpg" alt="InnoEX" className="card-img-top" style={{ height: '120px', objectFit: 'cover' }} />
                 <div className="card-body">
                   <h5>InnoEX Aoba + Odoo 2023</h5>
                   <p>於創新科技博覽會展示最新 ERP 及 CRM 解決方案。</p>

@@ -84,7 +84,8 @@ function HomeEN() {
           <h2 className="mb-4">Latest News</h2>
           <div className="row">
             <div className="col-md-6 mb-3">
-              <div className="card">
+              <div className="card h-100">
+                <img src="/images/hero2.jpg" alt="Odoo Roadshow" className="card-img-top" style={{ height: '120px', objectFit: 'cover' }} />
                 <div className="card-body">
                   <h5>Odoo Roadshow Guangzhou</h5>
                   <p>Aoba Hopkins was honored to be invited as session sharing speaker for the event.</p>
@@ -92,7 +93,8 @@ function HomeEN() {
               </div>
             </div>
             <div className="col-md-6 mb-3">
-              <div className="card">
+              <div className="card h-100">
+                <img src="/images/hero3.jpg" alt="InnoEX" className="card-img-top" style={{ height: '120px', objectFit: 'cover' }} />
                 <div className="card-body">
                   <h5>InnoEX Aoba + Odoo 2023</h5>
                   <p>Showcasing our latest ERP and CRM solutions at the innovation expo.</p>
