@@ -4,21 +4,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const slidesEN = [
   {
-    image: '/images/slide-crm.svg',
+    image: '/images/slide-crm-final.jpg',
     title: 'Professional CRM & ERP Solutions',
     subtitle: 'Empowering Your Business with Intelligent Management',
     cta: 'Contact Us',
     link: '/en/contact',
   },
   {
-    image: '/images/slide-erp.svg',
+    image: '/images/slide-erp-final.jpg',
     title: 'Powerful ERP Solutions • OdooERP Platform',
     subtitle: 'Your Complete Business Management System',
     cta: 'Our Solutions',
     link: '/en/solutions',
   },
   {
-    image: '/images/slide-retail.svg',
+    image: '/images/slide-retail-final.jpg',
     title: 'Complete Retail Solutions • POS • Member CRM',
     subtitle: 'Seamless Omnichannel Experience for Your Business',
     cta: 'Learn More',
@@ -28,21 +28,21 @@ const slidesEN = [
 
 const slidesZH = [
   {
-    image: '/images/slide-crm.svg',
+    image: '/images/slide-crm-final.jpg',
     title: '專業 CRM & ERP 解決方案',
     subtitle: '以智能化管理賦能您的企業',
     cta: '聯絡我們',
     link: '/zh/contact',
   },
   {
-    image: '/images/slide-erp.svg',
+    image: '/images/slide-erp-final.jpg',
     title: '強大 ERP 解決方案 • OdooERP 平台',
     subtitle: '您的全方位企業管理系統',
     cta: '我們的方案',
     link: '/zh/solutions',
   },
   {
-    image: '/images/slide-retail.svg',
+    image: '/images/slide-retail-final.jpg',
     title: '一體化零售解決方案 • POS • 會員 CRM',
     subtitle: '無縫跨渠道體驗',
     cta: '了解更多',
@@ -52,21 +52,21 @@ const slidesZH = [
 
 const slidesCN = [
   {
-    image: '/images/slide-crm.svg',
+    image: '/images/slide-crm-final.jpg',
     title: '专业 CRM & ERP 解决方案',
     subtitle: '以智能化管理赋能您的企业',
     cta: '联系我们',
     link: '/cn/contact',
   },
   {
-    image: '/images/slide-erp.svg',
+    image: '/images/slide-erp-final.jpg',
     title: '强大 ERP 解决方案 • OdooERP 平台',
     subtitle: '您的全方位企业管理平台',
     cta: '了解更多',
     link: '/cn/solutions',
   },
   {
-    image: '/images/slide-retail.svg',
+    image: '/images/slide-retail-final.jpg',
     title: '一体化零售解决方案 • POS • 会员 CRM',
     subtitle: '无缝全渠道体验',
     cta: '了解更多',
