@@ -1,8 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ContactEN() {
+  const [status, setStatus] = useState({ type: '', message: '' });
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus({ type: '', message: '' });
+
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      company: form.company.value,
+      email: form.email.value,
+      interest: form.interest.value,
+      message: form.message.value,
+    };
+
+    try {
+      const res = await fetch('/contact.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus({ type: 'success', message: result.message });
+        form.reset();
+      } else {
+        setStatus({ type: 'danger', message: result.message || 'Something went wrong. Please try again.' });
+      }
+    } catch (err) {
+      setStatus({ type: 'danger', message: 'Network error. Please check your connection and try again.' });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div>
       {/* Hero Banner */}
@@ -59,23 +98,31 @@ function ContactEN() {
               <div className="card-body p-4">
                 <h4 className="fw-bold mb-3">Send Us a Message</h4>
                 <p className="text-muted small mb-4">Fill in the form below and we'll get back to you within 1 business day.</p>
-                <form>
+
+                {status.message && (
+                  <div className={`alert alert-${status.type === 'success' ? 'success' : 'danger'} alert-dismissible fade show`} role="alert">
+                    {status.message}
+                    <button type="button" className="btn-close" onClick={() => setStatus({ type: '', message: '' })} aria-label="Close"></button>
+                  </div>
+                )}
+
+                <form onSubmit={handleSubmit}>
                   <div className="row g-3">
                     <div className="col-md-6">
                       <label className="form-label fw-semibold">Your Name *</label>
-                      <input type="text" className="form-control" placeholder="John Smith" required />
+                      <input type="text" name="name" className="form-control" placeholder="John Smith" required />
                     </div>
                     <div className="col-md-6">
                       <label className="form-label fw-semibold">Company</label>
-                      <input type="text" className="form-control" placeholder="Your Company Ltd." />
+                      <input type="text" name="company" className="form-control" placeholder="Your Company Ltd." />
                     </div>
                     <div className="col-12">
                       <label className="form-label fw-semibold">Email Address *</label>
-                      <input type="email" className="form-control" placeholder="john@company.com" required />
+                      <input type="email" name="email" className="form-control" placeholder="john@company.com" required />
                     </div>
                     <div className="col-12">
                       <label className="form-label fw-semibold">Interested In</label>
-                      <select className="form-select">
+                      <select name="interest" className="form-select">
                         <option value="">-- Select a solution --</option>
                         <option>CRM Solutions (SugarCRM / SuiteCRM / OdooCRM)</option>
                         <option>ERP Solutions (OdooERP)</option>
@@ -88,10 +135,17 @@ function ContactEN() {
                     </div>
                     <div className="col-12">
                       <label className="form-label fw-semibold">Your Message *</label>
-                      <textarea className="form-control" rows="4" placeholder="Tell us about your project or challenges..." required></textarea>
+                      <textarea name="message" className="form-control" rows="4" placeholder="Tell us about your project or challenges..." required></textarea>
                     </div>
                     <div className="col-12">
-                      <button type="submit" className="btn btn-primary w-100 fw-semibold">Send Message</button>
+                      <button type="submit" className="btn btn-primary w-100 fw-semibold" disabled={loading}>
+                        {loading ? (
+                          <span>
+                            <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                            Sending...
+                          </span>
+                        ) : 'Send Message'}
+                      </button>
                     </div>
                   </div>
                 </form>

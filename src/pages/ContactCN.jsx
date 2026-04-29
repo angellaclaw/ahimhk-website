@@ -1,8 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ContactCN() {
+  const [status, setStatus] = useState({ type: '', message: '' });
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus({ type: '', message: '' });
+
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      company: form.company.value,
+      email: form.email.value,
+      interest: form.interest.value,
+      message: form.message.value,
+    };
+
+    try {
+      const res = await fetch('/contact.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus({ type: 'success', message: result.message });
+        form.reset();
+      } else {
+        setStatus({ type: 'danger', message: result.message || '提交失敗，請稍後再試。' });
+      }
+    } catch (err) {
+      setStatus({ type: 'danger', message: '網絡錯誤，請檢查網絡連線後再試。' });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div>
       {/* Hero Banner */}
@@ -53,23 +92,31 @@ function ContactCN() {
               <div className="card-body p-4">
                 <h4 className="fw-bold mb-3">发送讯息</h4>
                 <p className="text-muted small mb-4">填写以下表格，我们将于 1 个工作天内回复。</p>
-                <form>
+
+                {status.message && (
+                  <div className={`alert alert-${status.type === 'success' ? 'success' : 'danger'} alert-dismissible fade show`} role="alert">
+                    {status.message}
+                    <button type="button" className="btn-close" onClick={() => setStatus({ type: '', message: '' })} aria-label="Close"></button>
+                  </div>
+                )}
+
+                <form onSubmit={handleSubmit}>
                   <div className="row g-3">
                     <div className="col-md-6">
                       <label className="form-label fw-semibold">您的姓名 *</label>
-                      <input type="text" className="form-control" placeholder="王小明" required />
+                      <input type="text" name="name" className="form-control" placeholder="王小明" required />
                     </div>
                     <div className="col-md-6">
                       <label className="form-label fw-semibold">公司名称</label>
-                      <input type="text" className="form-control" placeholder="您的公司有限公司" />
+                      <input type="text" name="company" className="form-control" placeholder="您的公司有限公司" />
                     </div>
                     <div className="col-12">
                       <label className="form-label fw-semibold">邮箱地址 *</label>
-                      <input type="email" className="form-control" placeholder="john@company.com" required />
+                      <input type="email" name="email" className="form-control" placeholder="john@company.com" required />
                     </div>
                     <div className="col-12">
                       <label className="form-label fw-semibold">有兴趣的方案</label>
-                      <select className="form-select">
+                      <select name="interest" className="form-select">
                         <option value="">-- 请选择方案 --</option>
                         <option>CRM 解决方案（SugarCRM / SuiteCRM / OdooCRM）</option>
                         <option>ERP 解决方案（OdooERP）</option>
@@ -82,10 +129,17 @@ function ContactCN() {
                     </div>
                     <div className="col-12">
                       <label className="form-label fw-semibold">您的讯息 *</label>
-                      <textarea className="form-control" rows="4" placeholder="告诉我们您的项目或挑战..." required></textarea>
+                      <textarea name="message" className="form-control" rows="4" placeholder="告诉我们您的项目或挑战..." required></textarea>
                     </div>
                     <div className="col-12">
-                      <button type="submit" className="btn btn-primary w-100 fw-semibold">发送讯息</button>
+                      <button type="submit" className="btn btn-primary w-100 fw-semibold" disabled={loading}>
+                        {loading ? (
+                          <span>
+                            <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                            发送中...
+                          </span>
+                        ) : '发送讯息'}
+                      </button>
                     </div>
                   </div>
                 </form>

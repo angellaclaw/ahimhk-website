@@ -1,8 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ContactZH() {
+  const [status, setStatus] = useState({ type: '', message: '' });
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus({ type: '', message: '' });
+
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      company: form.company.value,
+      email: form.email.value,
+      interest: form.interest.value,
+      message: form.message.value,
+    };
+
+    try {
+      const res = await fetch('/contact.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus({ type: 'success', message: result.message });
+        form.reset();
+      } else {
+        setStatus({ type: 'danger', message: result.message || '提交失敗，請稍後再試。' });
+      }
+    } catch (err) {
+      setStatus({ type: 'danger', message: '網絡錯誤，請檢查網絡連線後再試。' });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div>
       {/* Hero Banner */}
@@ -60,23 +99,23 @@ function ContactZH() {
               <div className="card-body p-4">
                 <h4 className="fw-bold mb-3">發送訊息</h4>
                 <p className="text-muted small mb-4">填寫以下表格，我們將於 1 個工作天內回覆。</p>
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="row g-3">
                     <div className="col-md-6">
                       <label className="form-label fw-semibold">您的姓名 *</label>
-                      <input type="text" className="form-control" placeholder="王小明" required />
+                      <input type="text" name="name" className="form-control" placeholder="王小明" required />
                     </div>
                     <div className="col-md-6">
                       <label className="form-label fw-semibold">公司名稱</label>
-                      <input type="text" className="form-control" placeholder="您的公司有限公司" />
+                      <input type="text" name="company" className="form-control" placeholder="您的公司有限公司" />
                     </div>
                     <div className="col-12">
                       <label className="form-label fw-semibold">電郵地址 *</label>
-                      <input type="email" className="form-control" placeholder="john@company.com" required />
+                      <input type="email" name="email" className="form-control" placeholder="john@company.com" required />
                     </div>
                     <div className="col-12">
                       <label className="form-label fw-semibold">有興趣的方案</label>
-                      <select className="form-select">
+                      <select name="interest" className="form-select">
                         <option value="">-- 請選擇方案 --</option>
                         <option>CRM 解決方案（SugarCRM / SuiteCRM / OdooCRM）</option>
                         <option>ERP 解決方案（OdooERP）</option>
@@ -89,13 +128,26 @@ function ContactZH() {
                     </div>
                     <div className="col-12">
                       <label className="form-label fw-semibold">您的訊息 *</label>
-                      <textarea className="form-control" rows="4" placeholder="告訴我們您的項目或挑戰..." required></textarea>
+                      <textarea name="message" className="form-control" rows="4" placeholder="告訴我們您的項目或挑戰..." required></textarea>
                     </div>
                     <div className="col-12">
-                      <button type="submit" className="btn btn-primary w-100 fw-semibold">發送訊息</button>
+                      <button type="submit" className="btn btn-primary w-100 fw-semibold" disabled={loading}>
+                        {loading ? (
+                          <span>
+                            <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                            發送中...
+                          </span>
+                        ) : '發送訊息'}
+                      </button>
                     </div>
                   </div>
                 </form>
+                {status.message && (
+                  <div className={`alert alert-${status.type === 'success' ? 'success' : 'danger'} alert-dismissible fade show mt-3`} role="alert">
+                    {status.message}
+                    <button type="button" className="btn-close" onClick={() => setStatus({ type: '', message: '' })} aria-label="Close"></button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
