@@ -4,21 +4,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const slidesEN = [
   {
-    image: '/images/hero1.jpg',
+    image: '/images/slide-crm.jpg',
     title: 'Professional CRM & ERP Solutions',
     subtitle: 'Empowering Your Business with Intelligent Management',
     cta: 'Contact Us',
     link: '/en/contact',
   },
   {
-    image: '/images/hero2.jpg',
+    image: '/images/slide-erp.jpg',
     title: 'Powerful ERP Solutions',
     subtitle: 'OdooERP Platform • Custom Development • Seamless Integration',
     cta: 'Learn More',
     link: '/en/solutions',
   },
   {
-    image: '/images/hero3.jpg',
+    image: '/images/slide-retail.jpg',
     title: 'Complete Retail Solutions',
     subtitle: 'POS • Member CRM • eShop Integration',
     cta: 'View Solutions',
@@ -28,21 +28,21 @@ const slidesEN = [
 
 const slidesZH = [
   {
-    image: '/images/hero1.jpg',
+    image: '/images/slide-crm.jpg',
     title: '專業 CRM & ERP 解決方案',
     subtitle: '以智能化管理賦能您的企業',
     cta: '聯絡我們',
     link: '/zh/contact',
   },
   {
-    image: '/images/hero2.jpg',
+    image: '/images/slide-erp.jpg',
     title: '強大 ERP 解決方案',
     subtitle: 'OdooERP 平台 • 定制開發 • 無縫整合',
     cta: '了解更多',
     link: '/zh/solutions',
   },
   {
-    image: '/images/hero3.jpg',
+    image: '/images/slide-retail.jpg',
     title: '一體化零售解決方案',
     subtitle: 'POS • 會員 CRM • 網店整合',
     cta: '查看方案',
