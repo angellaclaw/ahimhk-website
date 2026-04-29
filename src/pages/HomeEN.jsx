@@ -80,7 +80,7 @@ function HomeEN() {
                 <img src="/images/hero2.jpg" alt="Odoo Roadshow" className="card-img-top" style={{ height: '120px', objectFit: 'cover' }} />
                 <div className="card-body">
                   <h5>Odoo Roadshow Guangzhou</h5>
-                  <p>Aoba Hopkins was honored to be invited as session sharing speaker for the event.</p>
+                  <p>A Solutions was honored to be invited as session sharing speaker for the event.</p>
                   <Link to="/en/blog" className="btn btn-sm btn-outline-primary">Read More</Link>
                 </div>
               </div>

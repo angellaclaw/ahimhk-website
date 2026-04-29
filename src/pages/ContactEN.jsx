@@ -7,7 +7,7 @@ function ContactEN() {
     <div>
       {/* Hero Banner */}
       <div className="position-relative" style={{ maxHeight: '300px', overflow: 'hidden' }}>
-        <img src="/images/contact/contact-hero.jpg" alt="Contact AHIMHK" className="w-100" style={{ objectFit: 'cover', maxHeight: '300px' }} />
+        <img src="/images/contact/contact-hero.jpg" alt="Contact AH Solutions" className="w-100" style={{ objectFit: 'cover', maxHeight: '300px' }} />
         <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style={{ background: 'rgba(0,0,0,0.5)' }}>
           <div className="container text-white">
             <h1 className="display-5 fw-bold">Contact Us</h1>
@@ -21,7 +21,7 @@ function ContactEN() {
           {/* Contact Info */}
           <div className="col-lg-5">
             <div className="card border-0 shadow-sm h-100">
-              <img src="/images/contact/contact-office.jpg" alt="AHIMHK Office" className="card-img-top" style={{ height: '220px', objectFit: 'cover' }} />
+              <img src="/images/contact/contact-office.jpg" alt="AH Solutions Office" className="card-img-top" style={{ height: '220px', objectFit: 'cover' }} />
               <div className="card-body">
                 <h4 className="fw-bold">Get in Touch</h4>
                 <p className="text-muted">We're here to help you with your digital transformation journey.</p>
@@ -43,7 +43,7 @@ function ContactEN() {
 
                 <div className="mb-3">
                   <h6 className="fw-bold text-primary">💼 Company</h6>
-                  <p className="mb-0 ms-3 text-muted small">Aoba Hopkins Information Management Ltd.</p>
+                  <p className="mb-0 ms-3 text-muted small">AH Solutions Limited</p>
                 </div>
 
                 <div className="alert alert-light border small">

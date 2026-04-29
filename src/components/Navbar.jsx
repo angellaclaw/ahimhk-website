@@ -9,7 +9,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-white shadow-sm">
       <div className="container">
         <Link className="navbar-brand d-flex align-items-center" to={isZh ? '/zh' : '/'}>
-          <img src="/images/ahimhk-logo.svg" alt="AHIMHK" height="38" />
+          <img src="/images/ahimhk-logo.svg" alt="AH Solutions" height="38" />
         </Link>
         <div className="navbar-nav ms-auto">
           {isZh ? (

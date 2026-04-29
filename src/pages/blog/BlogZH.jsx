@@ -12,7 +12,7 @@ function BlogZH() {
         <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style={{ background: 'rgba(0,0,0,0.45)' }}>
           <div className="container text-white text-center">
             <h1 className="display-4 fw-bold">新聞資訊</h1>
-            <p className="lead">Aoba Hopkins 資訊管理最新消息</p>
+            <p className="lead">AH Solutions 資訊管理最新消息</p>
           </div>
         </div>
       </div>

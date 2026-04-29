@@ -5,9 +5,9 @@ export const blogPostsEN = [
     title: 'Odoo Roadshow Guangzhou 2024',
     date: '2024-10-15',
     image: '/images/hero2.jpg',
-    excerpt: 'Aoba Hopkins was honored to be invited as session sharing speaker at the Odoo Roadshow in Guangzhou.',
+    excerpt: 'A Solutions was honored to be invited as session sharing speaker at the Odoo Roadshow in Guangzhou.',
     content: `
-      <p>Aoba Hopkins Information Management was honored to be invited as a session sharing speaker at the Odoo Roadshow in Guangzhou this year.</p>
+      <p>A Solutions Information Management was honored to be invited as a session sharing speaker at the Odoo Roadshow in Guangzhou this year.</p>
       <p>Our team presented on the topic of "Digital Transformation for SMEs using Odoo ERP and CRM Solutions", sharing our experience and insights with over 200 attendees from various industries.</p>
       <p>The event was a great success and we look forward to more opportunities to share our knowledge and expertise with the community.</p>
     `,
@@ -57,9 +57,9 @@ export const blogPostsZH = [
     title: 'Odoo 廣州路演 2024',
     date: '2024-10-15',
     image: '/images/hero2.jpg',
-    excerpt: 'Aoba Hopkins 很榮幸獲邀在廣州 Odoo 路演擔任分享嘉賓。',
+    excerpt: 'A Solutions 很榮幸獲邀在廣州 Odoo 路演擔任分享嘉賓。',
     content: `
-      <p>Aoba Hopkins 資訊管理很榮幸獲邀在今年的廣州 Odoo 路演擔任分享嘉賓。</p>
+      <p>A Solutions 資訊管理很榮幸獲邀在今年的廣州 Odoo 路演擔任分享嘉賓。</p>
       <p>我們的團隊以「中小企數碼轉型：Odoo ERP 與 CRM 解決方案」為題進行分享，與超過200位來自不同行業的與會者交流經驗與見解。</p>
       <p>活動圓滿成功，我們期待未來有更多機會與業界分享我們的知識與專業。</p>
     `,

@@ -7,7 +7,7 @@ function AboutZH() {
     <div>
       {/* Hero Banner */}
       <div className="position-relative" style={{ maxHeight: '320px', overflow: 'hidden' }}>
-        <img src="/images/about/about-hero.jpg" alt="關於 AHIMHK" className="w-100" style={{ objectFit: 'cover', maxHeight: '320px' }} />
+        <img src="/images/about/about-hero.jpg" alt="關於 AH Solutions" className="w-100" style={{ objectFit: 'cover', maxHeight: '320px' }} />
         <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style={{ background: 'rgba(0,0,0,0.5)' }}>
           <div className="container text-white">
             <h1 className="display-5 fw-bold">關於我們</h1>
@@ -20,14 +20,14 @@ function AboutZH() {
         {/* 公司概覽 */}
         <div className="row g-4 mb-5">
           <div className="col-lg-6">
-            <img src="/images/about/about-team.jpg" alt="AHIMHK 團隊" className="rounded shadow w-100" style={{ objectFit: 'cover', height: '280px' }} />
+            <img src="/images/about/about-team.jpg" alt="AH Solutions 團隊" className="rounded shadow w-100" style={{ objectFit: 'cover', height: '280px' }} />
           </div>
           <div className="col-lg-6 d-flex flex-column justify-content-center">
             <h2>公司簡介</h2>
             <p className="lead text-muted">專業 IT 顧問公司</p>
             <p>我們是一家專業的 IT 顧問公司，專門提供 CRM 及 ERP 解決方案。多年經驗及專業團隊，助您企業數碼化轉型及業務增長。</p>
             <p>我們的專業範疇涵蓋 <strong>OdooERP</strong>、<strong>SugarCRM</strong>、<strong>SuiteCRM</strong> 及多個電子商務平台整合，服務範圍覆蓋香港及亞太地區。</p>
-            <p>AHIMHK 由對科技及商業卓越充滿熱情的專業人士創立，透過創新 IT 方案助各組織按其獨特需求進行營運數碼轉型。</p>
+            <p>AH Solutions 由對科技及商業卓越充滿熱情的專業人士創立，透過創新 IT 方案助各組織按其獨特需求進行營運數碼轉型。</p>
           </div>
         </div>
 
@@ -56,7 +56,7 @@ function AboutZH() {
         {/* 為何選擇我們 */}
         <div className="row g-4 mb-5">
           <div className="col-12">
-            <h3 className="mb-4">為何選擇 AHIMHK？</h3>
+            <h3 className="mb-4">為何選擇 AH Solutions？</h3>
           </div>
           {[
             { title: '行業專業知識', desc: '深耕零售、醫學美容、專業服務、協會及電子商務等行業，經驗豐富。', icon: '🏆' },

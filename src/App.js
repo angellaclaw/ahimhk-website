@@ -52,7 +52,7 @@ function Footer() {
         <p className="mb-1">
           {isZh ? 'WhatsApp: +852 6588 4054  |  電郵: info@ahimhk.com.hk' : 'WhatsApp: +852 6588 4054  |  Email: info@ahimhk.com.hk'}
         </p>
-        <small>© 2024 Aoba Hopkins Information Management Ltd. All Rights Reserved.</small>
+        <small>© 2024 AH Solutions Limited. All Rights Reserved.</small>
       </div>
     </footer>
   );

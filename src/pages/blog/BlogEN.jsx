@@ -12,7 +12,7 @@ function BlogEN() {
         <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style={{ background: 'rgba(0,0,0,0.45)' }}>
           <div className="container text-white text-center">
             <h1 className="display-4 fw-bold">News & Updates</h1>
-            <p className="lead">Latest from Aoba Hopkins Information Management</p>
+            <p className="lead">Latest from AH Solutions Information Management</p>
           </div>
         </div>
       </div>

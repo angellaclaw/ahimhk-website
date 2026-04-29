@@ -7,11 +7,11 @@ function AboutEN() {
     <div>
       {/* Hero Banner */}
       <div className="position-relative" style={{ maxHeight: '320px', overflow: 'hidden' }}>
-        <img src="/images/about/about-hero.jpg" alt="About AHIMHK" className="w-100" style={{ objectFit: 'cover', maxHeight: '320px' }} />
+        <img src="/images/about/about-hero.jpg" alt="About AH Solutions" className="w-100" style={{ objectFit: 'cover', maxHeight: '320px' }} />
         <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style={{ background: 'rgba(0,0,0,0.5)' }}>
           <div className="container text-white">
             <h1 className="display-5 fw-bold">About Us</h1>
-            <p className="lead">Aoba Hopkins Information Management Ltd.</p>
+            <p className="lead">AH Solutions Limited</p>
           </div>
         </div>
       </div>
@@ -20,14 +20,14 @@ function AboutEN() {
         {/* Company Overview */}
         <div className="row g-4 mb-5">
           <div className="col-lg-6">
-            <img src="/images/about/about-team.jpg" alt="AHIMHK Team" className="rounded shadow w-100" style={{ objectFit: 'cover', height: '280px' }} />
+            <img src="/images/about/about-team.jpg" alt="AH Solutions Team" className="rounded shadow w-100" style={{ objectFit: 'cover', height: '280px' }} />
           </div>
           <div className="col-lg-6 d-flex flex-column justify-content-center">
             <h2>Who We Are</h2>
             <p className="lead text-muted">Professional IT Consulting Firm</p>
             <p>We are a professional IT consulting firm specializing in CRM and ERP solutions. With years of experience and a dedicated team, we help businesses digitalize their operations and achieve growth.</p>
             <p>Our expertise spans across multiple platforms including <strong>OdooERP</strong>, <strong>SugarCRM</strong>, <strong>SuiteCRM</strong>, and various e-commerce integrations. We serve clients across Hong Kong and the Asia-Pacific region.</p>
-            <p>Founded with a passion for technology and business excellence, AHIMHK has been helping organizations transform their operations through innovative IT solutions tailored to their unique needs.</p>
+            <p>Founded with a passion for technology and business excellence, AH Solutions has been helping organizations transform their operations through innovative IT solutions tailored to their unique needs.</p>
           </div>
         </div>
 
@@ -56,7 +56,7 @@ function AboutEN() {
         {/* Why Choose Us */}
         <div className="row g-4 mb-5">
           <div className="col-12">
-            <h3 className="mb-4">Why Choose AHIMHK?</h3>
+            <h3 className="mb-4">Why Choose AH Solutions?</h3>
           </div>
           {[
             { title: 'Industry Expertise', desc: 'Deep experience across retail, medical beauty, professional services, associations, and e-commerce sectors.', icon: '🏆' },

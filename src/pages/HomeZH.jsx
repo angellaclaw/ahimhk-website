@@ -80,7 +80,7 @@ function HomeZH() {
                 <img src="/images/hero2.jpg" alt="Odoo 廣州路演" className="card-img-top" style={{ height: '120px', objectFit: 'cover' }} />
                 <div className="card-body">
                   <h5>Odoo 廣州路演</h5>
-                  <p>Aoba Hopkins 很榮幸獲邀擔任活動分享嘉賓。</p>
+                  <p>A Solutions 很榮幸獲邀擔任活動分享嘉賓。</p>
                   <Link to="/zh/blog" className="btn btn-sm btn-outline-primary">閱讀更多</Link>
                 </div>
               </div>

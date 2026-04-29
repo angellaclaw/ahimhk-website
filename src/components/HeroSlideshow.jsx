@@ -62,23 +62,27 @@ function HeroSlideshow({ language = 'EN' }) {
   }, [slides.length]);
 
   return (
-    <div className="position-relative" style={{ maxHeight: '400px', overflow: 'hidden' }}>
+    <div style={{ position: 'relative', height: '400px', overflow: 'hidden' }}>
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
           key={index}
-          className="position-absolute top-0 start-0 w-100 h-100"
           style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
             opacity: index === current ? 1 : 0,
             transition: 'opacity 1s ease-in-out',
-            zIndex: index === current ? 1 : 0,
+            zIndex: index === current ? 2 : 1,
+            pointerEvents: index === current ? 'auto' : 'none',
           }}
         >
           <img
             src={slide.image}
             alt={slide.title}
-            className="w-100"
-            style={{ objectFit: 'cover', maxHeight: '400px', minHeight: '400px' }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
           <div
             className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
